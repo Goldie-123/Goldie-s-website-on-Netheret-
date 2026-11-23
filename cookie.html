@@ -1,0 +1,506 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Cookie Consent | Netheret IT Support Solutions</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: white;
+}
+
+/* HEADER */
+header {
+    background: #000;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ffeb3d;
+}
+
+header h1 {
+    color: #ffeb3d;
+    margin: 0;
+}
+
+header p {
+    color: #ccc;
+}
+
+/* NAVIGATION */
+nav {
+    background: #1e1e1e;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+nav a:hover {
+    color: #ffeb3d;
+}
+
+/* MAIN CONTENT */
+main {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.content-box {
+    background: #1e1e1e;
+    padding: 25px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    color: #ffeb3d;
+}
+
+p {
+    color: #ccc;
+    line-height: 1.7;
+}
+
+/* BUTTONS */
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.accept {
+    background: #ffeb3d;
+    color: #000;
+}
+
+.reject {
+    background: #555;
+    color: white;
+}
+
+.manage {
+    background: #333;
+    color: #ffeb3d;
+    border: 1px solid #ffeb3d;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* COOKIE CATEGORIES */
+.cookie-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #444;
+}
+
+.cookie-row input {
+    width: 20px;
+    height: 20px;
+    accent-color: #ffeb3d;
+}
+
+.cookie-row p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.always-on {
+    color: #ffeb3d;
+    font-size: 13px;
+}
+
+/* COOKIE BANNER */
+.cookie-banner {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 700px;
+    background: #1e1e1e;
+    border: 2px solid #ffeb3d;
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: 0 5px 25px #000;
+    z-index: 1000;
+}
+
+.cookie-banner h2 {
+    margin-top: 0;
+}
+
+/* PREFERENCES WINDOW */
+.preferences-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    z-index: 1100;
+}
+
+.preferences-box {
+    width: 100%;
+    max-width: 550px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #1e1e1e;
+    border: 2px solid #ffeb3d;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+/* FOOTER */
+footer {
+    background: #000;
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+}
+
+footer a {
+    color: #ffeb3d;
+}
+
+/* STATUS */
+#status {
+    color: #ffeb3d;
+    font-weight: bold;
+}
+
+/* MOBILE */
+@media(max-width: 600px) {
+    main {
+        margin: 20px auto;
+    }
+
+    .cookie-banner {
+        bottom: 10px;
+    }
+
+    .cookie-row {
+        align-items: flex-start;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Netheret IT Support Solutions</h1>
+    <p>Cookie Consent Management</p>
+</header>
+
+<nav>
+    <a href="welcome.html">Home</a>
+    <a href="cookie.html">Cookie Policy</a>
+</nav>
+
+<main>
+
+    <div class="content-box">
+        <h2>Your Privacy Matters</h2>
+
+        <p>
+            At Netheret IT Support Solutions, we respect
+            your privacy and want you to understand how
+            cookies are used when visiting our website.
+        </p>
+
+        <p>
+            Cookies are small text files stored on your
+            device. They can help websites remember
+            preferences and understand how visitors
+            use their services.
+        </p>
+    </div>
+
+    <div class="content-box">
+        <h2>Manage Your Cookie Preferences</h2>
+
+        <p>
+            You can choose which optional cookies you
+            would like to allow. Essential cookies are
+            always enabled.
+        </p>
+
+        <h3>Essential Cookies</h3>
+        <p>
+            These cookies are necessary for basic
+            website functionality and security.
+        </p>
+        <span class="always-on">Always enabled</span>
+
+        <h3>Analytics Cookies</h3>
+        <p>
+            These cookies help website owners understand
+            visitor numbers and website performance.
+        </p>
+
+        <h3>Marketing Cookies</h3>
+        <p>
+            These cookies can be used to personalise
+            advertising and marketing content.
+        </p>
+
+        <button class="manage" onclick="openPreferences()">
+            Change Cookie Preferences
+        </button>
+
+        <p id="status">Your preferences have not been saved yet.</p>
+    </div>
+
+    <div class="content-box">
+        <h2>Why Do We Use Cookies?</h2>
+
+        <p>
+            Cookies can help improve website performance,
+            remember user settings and provide a better
+            browsing experience.
+        </p>
+
+        <p>
+            You can change or withdraw your optional
+            cookie choices at any time using the
+            preference settings.
+        </p>
+    </div>
+
+</main>
+
+<!-- COOKIE CONSENT BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+
+    <h2>🍪 We Value Your Privacy</h2>
+
+    <p>
+        Netheret IT Support Solutions uses cookies to
+        improve your browsing experience. You can accept
+        all cookies, reject optional cookies or customise
+        your preferences.
+    </p>
+
+    <button class="accept" onclick="acceptAll()">
+        Accept All
+    </button>
+
+    <button class="reject" onclick="rejectAll()">
+        Reject All
+    </button>
+
+    <button class="manage" onclick="openPreferences()">
+        Manage Preferences
+    </button>
+
+</div>
+
+<!-- PREFERENCES WINDOW -->
+<div class="preferences-overlay" id="preferencesOverlay">
+
+    <div class="preferences-box">
+
+        <h2>Cookie Settings</h2>
+
+        <p>
+            Choose which cookies you would like to allow.
+        </p>
+
+        <div class="cookie-row">
+            <div>
+                <strong>Essential Cookies</strong>
+                <p>Required for basic website functionality.</p>
+                <span class="always-on">Always enabled</span>
+            </div>
+
+            <input type="checkbox" checked disabled>
+        </div>
+
+        <div class="cookie-row">
+            <div>
+                <strong>Analytics Cookies</strong>
+                <p>Help us understand website usage.</p>
+            </div>
+
+            <input type="checkbox" id="analytics">
+        </div>
+
+        <div class="cookie-row">
+            <div>
+                <strong>Marketing Cookies</strong>
+                <p>Help personalise marketing content.</p>
+            </div>
+
+            <input type="checkbox" id="marketing">
+        </div>
+
+        <button class="accept" onclick="savePreferences()">
+            Save My Preferences
+        </button>
+
+        <button class="reject" onclick="closePreferences()">
+            Cancel
+        </button>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>
+        &copy; 2026 Netheret IT Support Solutions.
+        All rights reserved.
+    </p>
+
+    <a href="welcome.html">Return to Homepage</a>
+</footer>
+
+<script>
+
+/* GET HTML ELEMENTS */
+const banner = document.getElementById("cookieBanner");
+const overlay = document.getElementById("preferencesOverlay");
+const analytics = document.getElementById("analytics");
+const marketing = document.getElementById("marketing");
+
+/* SAVE COOKIE CONSENT */
+function saveConsent(preferences) {
+
+    const consentData = {
+        essential: true,
+        analytics: preferences.analytics,
+        marketing: preferences.marketing,
+        savedAt: new Date().toISOString()
+    };
+
+    localStorage.setItem(
+        "netheretCookieConsent",
+        JSON.stringify(consentData)
+    );
+
+    banner.style.display = "none";
+    overlay.style.display = "none";
+
+    updateStatus(consentData);
+}
+
+/* ACCEPT ALL COOKIES */
+function acceptAll() {
+
+    saveConsent({
+        analytics: true,
+        marketing: true
+    });
+
+}
+
+/* REJECT OPTIONAL COOKIES */
+function rejectAll() {
+
+    saveConsent({
+        analytics: false,
+        marketing: false
+    });
+
+}
+
+/* OPEN PREFERENCES */
+function openPreferences() {
+
+    const saved = JSON.parse(
+        localStorage.getItem("netheretCookieConsent") || "null"
+    );
+
+    analytics.checked = saved ? saved.analytics : false;
+    marketing.checked = saved ? saved.marketing : false;
+
+    overlay.style.display = "flex";
+
+}
+
+/* SAVE CUSTOM PREFERENCES */
+function savePreferences() {
+
+    saveConsent({
+        analytics: analytics.checked,
+        marketing: marketing.checked
+    });
+
+}
+
+/* CLOSE SETTINGS */
+function closePreferences() {
+    overlay.style.display = "none";
+}
+
+/* UPDATE CONSENT STATUS */
+function updateStatus(data) {
+
+    document.getElementById("status").textContent =
+        "Preferences saved: Essential: Yes | Analytics: " +
+        (data.analytics ? "Yes" : "No") +
+        " | Marketing: " +
+        (data.marketing ? "Yes" : "No");
+
+}
+
+/* CHECK PREVIOUS CONSENT */
+window.addEventListener("DOMContentLoaded", function() {
+
+    const saved = JSON.parse(
+        localStorage.getItem("netheretCookieConsent") || "null"
+    );
+
+    if (saved) {
+
+        banner.style.display = "none";
+        updateStatus(saved);
+
+    } else {
+
+        banner.style.display = "block";
+
+    }
+
+});
+
+/* CLOSE SETTINGS USING ESCAPE */
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+        closePreferences();
+    }
+
+});
+
+</script>
+
+</body>
+</html>

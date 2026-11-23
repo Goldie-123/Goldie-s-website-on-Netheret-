@@ -1,0 +1,811 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Netheret IT Support Solutions</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: white;
+}
+
+/* HEADER */
+.header-main {
+    background: #000;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo {
+    color: #ffeb3d;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo-text span {
+    display: block;
+    color: #aaa;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    margin-top: 3px;
+}
+
+/* NAVIGATION */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #ffeb3d;
+}
+
+/* HERO */
+.hero {
+    min-height: 440px;
+    padding: 110px 20px;
+    text-align: center;
+    background:
+        linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
+        url("it-support.png") center/cover no-repeat;
+}
+
+.hero h1 {
+    color: #ffeb3d;
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #eee;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: auto;
+}
+
+.hero a {
+    display: inline-block;
+    background: #ffeb3d;
+    color: #000;
+    padding: 14px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 25px;
+    transition: background .3s;
+}
+
+.hero a:hover {
+    background: white;
+}
+
+/* WELCOME SECTION */
+.welcome-section {
+    max-width: 1050px;
+    margin: 65px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.welcome-section h2 {
+    color: #ffeb3d;
+    font-size: 29px;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    color: #ccc;
+    line-height: 1.9;
+    font-size: 16px;
+    max-width: 850px;
+    margin: 12px auto;
+}
+
+/* SECTION HEADING */
+.section-heading {
+    text-align: center;
+    color: #ffeb3d;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* SERVICES */
+.services-section {
+    padding: 20px 20px 70px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.service-card {
+    background: #1e1e1e;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 30px 22px;
+    text-align: center;
+    transition: transform .3s, border-color .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: #ffeb3d;
+}
+
+.service-icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.service-card h3 {
+    color: #ffeb3d;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #ccc;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* SUPPORT BANNER */
+.support-banner {
+    background: #1e1e1e;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.support-banner h2 {
+    color: #ffeb3d;
+    font-size: 26px;
+}
+
+.support-banner p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.support-banner a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 24px;
+    background: #ffeb3d;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.support-banner a:hover {
+    background: white;
+}
+
+/* FOOTER */
+footer {
+    background: #000;
+    border-top: 3px solid #ffeb3d;
+    padding: 40px 8% 15px;
+    color: #fff;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-column h3 {
+    color: #ffeb3d;
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+.footer-column a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 12px;
+    font-size: 14px;
+    transition: color .3s;
+}
+
+.footer-column a:hover {
+    color: #ffeb3d;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 18px;
+    margin-top: 30px;
+    color: #888;
+    font-size: 13px;
+}
+
+/* CHAT BUTTON */
+.chat-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background: #ffeb3d;
+    color: #000;
+    font-size: 27px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,.5);
+    z-index: 1000;
+    transition: transform .2s;
+}
+
+.chat-button:hover {
+    transform: scale(1.08);
+}
+
+/* CHAT POPUP */
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 360px;
+    max-width: calc(100vw - 30px);
+    height: 480px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0,0,0,.6);
+    z-index: 999;
+    flex-direction: column;
+}
+
+.chat-popup.open {
+    display: flex;
+}
+
+.chat-header {
+    background: #000;
+    color: #ffeb3d;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.chat-header p {
+    margin: 5px 0 0;
+    font-size: 11px;
+    color: #ccc;
+}
+
+.close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background: #f5f5f5;
+}
+
+.container {
+    border: 2px solid #dedede;
+    background: #f1f1f1;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    color: #111;
+    overflow: hidden;
+}
+
+.container.darker {
+    border-color: #ccc;
+    background: #ddd;
+}
+
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container img {
+    float: left;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.container img.right {
+    float: right;
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+.container p {
+    font-size: 13px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.time-right {
+    float: right;
+    color: #888;
+    font-size: 11px;
+}
+
+.time-left {
+    float: left;
+    color: #777;
+    font-size: 11px;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    gap: 8px;
+    border-top: 1px solid #ddd;
+    background: white;
+}
+
+.chat-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+.chat-input input:focus {
+    border-color: #d4bd00;
+}
+
+.chat-input button {
+    background: #ffeb3d;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background: #e5d323;
+}
+
+.chat-note {
+    text-align: center;
+    font-size: 10px;
+    color: #777;
+    padding: 6px;
+    background: white;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 850px) {
+    .header-main {
+        justify-content: center;
+    }
+
+    .navbar {
+        gap: 13px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .hero {
+        padding: 75px 15px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .navbar {
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .chat-popup {
+        right: 15px;
+        bottom: 90px;
+        width: calc(100vw - 30px);
+        height: 65vh;
+        max-height: 480px;
+    }
+
+    .chat-button {
+        right: 15px;
+        bottom: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header-main">
+
+    <a href="welcome.html" class="logo">
+        <img src="Screenshot 2026-10-08 115035.png"
+             alt="Netheret IT Logo"
+             class="logo-img">
+
+        <div class="logo-text">
+            Netheret IT
+            <span>SUPPORT SOLUTIONS</span>
+        </div>
+    </a>
+
+    <nav class="navbar">
+        <a href="welcome.html" class="active">Home</a>
+        <a href="login.php">Log in</a>
+        <a href="register.php">Register</a>
+        <a href="contact.html">About Us</a>
+        <a href="knowledge.html">Knowledge Base</a>
+        <a href="jobs.php">On-site Jobs</a>
+        <a href="contactus.html">Support Services</a>
+        <a href="cookie.html">Cookie Policy</a>
+    </nav>
+
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+    <h1>Welcome to Netheret IT Support Solutions</h1>
+
+    <p>
+        Your trusted partner for professional IT support,
+        troubleshooting and reliable technical solutions.
+        We are here to help keep your technology running smoothly.
+    </p>
+
+    <a href="contactus.html">Contact Our Support Team</a>
+
+</section>
+
+<!-- WELCOME INFORMATION -->
+<section class="welcome-section">
+
+    <h2>Professional IT Support You Can Trust</h2>
+
+    <p>
+        At Netheret IT Support Solutions, we provide reliable
+        technology support to help individuals and businesses
+        solve technical problems, improve productivity and keep
+        their systems running smoothly and efficiently.
+    </p>
+
+    <p>
+        Whether you need help with computer issues, software
+        troubleshooting or on-site technical assistance,
+        our team is here to help.
+    </p>
+
+</section>
+
+<!-- SERVICES -->
+<section class="services-section">
+
+    <h2 class="section-heading">Our Support Services</h2>
+
+    <div class="services">
+
+        <div class="service-card">
+            <div class="service-icon">💻</div>
+            <h3>Technical Support</h3>
+            <p>
+                Get help with computer problems, software issues,
+                troubleshooting and technical difficulties.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🔧</div>
+            <h3>On-site IT Jobs</h3>
+            <p>
+                Arrange professional in-person IT support and
+                technical assistance when you need it.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🎧</div>
+            <h3>Customer Service Support</h3>
+            <p>
+                Contact our team for assistance, enquiries and
+                updates about your technical support requests.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SUPPORT BANNER -->
+<section class="support-banner">
+
+    <h2>Need Help With a Technical Problem?</h2>
+
+    <p>Our support team is ready to help you find a solution.</p>
+
+    <a href="contactus.html">Get Support Today</a>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="welcome.html">Home</a>
+            <a href="knowledge.html">Knowledge Base</a>
+            <a href="jobs.php">Careers</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Our Services</h3>
+            <a href="contactus.html">IT Support</a>
+            <a href="contact.html">About Us</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Account</h3>
+            <a href="login.php">Log in</a>
+            <a href="register.php">Register</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Legal</h3>
+            <a href="cookie.html">Cookie Policy</a>
+        </div>
+
+    </div>
+
+    <p class="footer-bottom">
+        &copy; 2026 Netheret IT Support Solutions. All rights reserved.
+    </p>
+
+</footer>
+
+<!-- CHAT POPUP -->
+<div class="chat-popup" id="chatPopup">
+
+    <div class="chat-header">
+        <div>
+            <h3>Netheret IT Support</h3>
+            <p>Welcome! How can we help you?</p>
+        </div>
+
+        <button class="close-chat"
+                onclick="toggleChat()"
+                aria-label="Close chat">
+            &times;
+        </button>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+
+        <div class="container">
+            <img src="OIP.webp" alt="Support team member">
+            <p>Hello. How are you today?</p>
+            <span class="time-right">11:00</span>
+        </div>
+
+        <div class="container darker">
+            <img src="OIP (1).webp" alt="Customer" class="right">
+            <p>Hey! I'm fine. Thanks for asking!</p>
+            <span class="time-left">11:01</span>
+        </div>
+
+        <div class="container">
+            <img src="OIP.webp" alt="Support team member">
+            <p>What do you need help with?</p>
+            <span class="time-right">11:02</span>
+        </div>
+
+        <div class="container darker">
+            <img src="OIP (1).webp" alt="Customer" class="right">
+            <p>
+                I don't know how to solve a technical issue.
+                Do you mind having a meeting in person with me?
+            </p>
+            <span class="time-left">11:05</span>
+        </div>
+
+        <div class="container">
+            <img src="OIP.webp" alt="Support team member">
+            <p>Is 3pm work for you?</p>
+            <span class="time-right">11:07</span>
+        </div>
+
+        <div class="container darker">
+            <img src="OIP (1).webp" alt="Customer" class="right">
+            <p>Yes. See you!</p>
+            <span class="time-left">11:09</span>
+        </div>
+
+    </div>
+
+    <form class="chat-input" id="chatForm">
+
+        <input type="text"
+               id="messageInput"
+               placeholder="Type your message..."
+               aria-label="Type your message"
+               autocomplete="off"
+               required>
+
+        <button type="submit">Send</button>
+
+    </form>
+
+    <div class="chat-note">
+        Demonstration chat – messages are not sent to support staff.
+    </div>
+
+</div>
+
+<!-- FLOATING CHAT BUTTON -->
+<button class="chat-button"
+        id="chatButton"
+        onclick="toggleChat()"
+        aria-label="Open support chat"
+        aria-expanded="false">
+    &#128172;
+</button>
+
+<!-- JAVASCRIPT -->
+<script>
+const chatPopup = document.getElementById("chatPopup");
+const chatButton = document.getElementById("chatButton");
+const chatMessages = document.getElementById("chatMessages");
+const messageInput = document.getElementById("messageInput");
+const chatForm = document.getElementById("chatForm");
+
+/* OPEN AND CLOSE CHAT */
+function toggleChat() {
+    const isOpen = chatPopup.classList.toggle("open");
+
+    chatButton.setAttribute("aria-expanded", isOpen);
+
+    if (isOpen) {
+        messageInput.focus();
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+}
+
+/* ADD VISITOR MESSAGE */
+chatForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const message = messageInput.value.trim();
+
+    if (!message) {
+        return;
+    }
+
+    const container = document.createElement("div");
+    container.className = "container darker";
+
+    const avatar = document.createElement("img");
+    avatar.src = "OIP (1).webp";
+    avatar.alt = "Customer";
+    avatar.className = "right";
+
+    const paragraph = document.createElement("p");
+    paragraph.textContent = message;
+
+    const time = document.createElement("span");
+    time.className = "time-left";
+    time.textContent = new Date().toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit"
+    });
+
+    container.appendChild(avatar);
+    container.appendChild(paragraph);
+    container.appendChild(time);
+
+    chatMessages.appendChild(container);
+
+    messageInput.value = "";
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+});
+
+/* CLOSE CHAT WITH ESCAPE KEY */
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape" &&
+        chatPopup.classList.contains("open")) {
+        toggleChat();
+    }
+});
+</script>
+
+</body>
+</html>

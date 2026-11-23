@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Update Troubleshooting | Netheret IT Support Solution</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #121212;
+            color: #ffffff;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #000000;
+            padding: 22px;
+            text-align: center;
+            border-bottom: 3px solid #ffeb3d;
+        }
+
+        header h1 {
+            color: #ffeb3d;
+            margin: 0;
+        }
+
+        nav {
+            background: #202020;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffeb3d;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        h2, h3 {
+            color: #ffeb3d;
+        }
+
+        .intro {
+            background: #222222;
+            padding: 18px;
+            border-left: 4px solid #ffeb3d;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+
+        details {
+            background: #202020;
+            margin: 15px 0;
+            padding: 18px;
+            border-radius: 8px;
+            border: 1px solid #444444;
+        }
+
+        summary {
+            color: #ffeb3d;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #ffeb3d;
+        }
+
+        .warning {
+            background: #382d13;
+            border-left: 4px solid #ffeb3d;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            min-width: 500px;
+        }
+
+        th, td {
+            border: 1px solid #555555;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #ffeb3d;
+            color: #000000;
+        }
+
+        tr:nth-child(even) {
+            background: #252525;
+        }
+
+        .support-button {
+            display: inline-block;
+            background: #ffeb3d;
+            color: #000000;
+            padding: 12px 22px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        footer {
+            background: #000000;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #cccccc;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+
+            main {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Netheret IT Support Solutions</h1>
+    <p>Knowledge Base - Windows Update Troubleshooting</p>
+</header>
+
+<nav>
+    <a href="welcome.html">Home</a>
+    <a href="knowledge.html">Knowledge Base</a>
+    <a href="contactus.html">Support</a>
+</nav>
+
+<main>
+
+    <h2>How to Fix a Windows software Update Problem?</h2>
+
+    <div class="intro">
+        Windows software updates help protect your computer, fix problems
+        and improve performance. Sometimes updates fail to download
+        or install. This guide explains some steps you can try.
+    </div>
+
+    <h2>10 Steps to Troubleshoot Windows Update</h2>
+
+    <details open>
+        <summary>Step 1: Run the Windows software Update Troubleshooter</summary>
+        <ol>
+            <li>Select Start and open Settings.</li>
+            <li>Select System, then Troubleshoot.</li>
+            <li>Choose Other troubleshooters.</li>
+            <li>Find Windows Update and select Run.</li>
+            <li>Follow the instructions on the screen.</li>
+        </ol>
+    </details>
+
+    <details>
+        <summary>Step 2: Check your Internet connection</summary>
+        <ol>
+            <li>Open Start and select Settings.</li>
+            <li>Choose Network & Internet, then Wi-Fi.</li>
+            <li>Check that your device is connected to the Internet.</li>
+            <li>Reconnect to your Wi-Fi or Ethernet if necessary.</li>
+        </ol>
+        <p>
+            For more help, visit
+            <a href="https://support.microsoft.com/en-us/topic/9424a1f7-6a3b-65a6-4d78-7f07eee84d2c" target="_blank" rel="noopener">
+                Microsoft's Wi-Fi troubleshooting guide
+            </a>.
+        </p>
+    </details>
+
+    <details>
+        <summary>Step 3: Check Administrator access</summary>
+        <p>
+            Some updates require administrator permission.
+            If your account does not have administrator access,
+            ask your IT support team or device administrator for help.
+        </p>
+        <p>
+            Learn more about
+            <a href="https://support.microsoft.com/en-us/topic/20de74e0-ac7f-3502-a866-32915af2a34d" target="_blank" rel="noopener">
+                creating a Windows administrator account
+            </a>.
+        </p>
+    </details>
+
+    <details>
+        <summary>Step 4: Disconnect external hardware</summary>
+        <p>
+            Disconnect unnecessary external devices, such as USB
+            drives, external storage, docks and other accessories.
+            Try Windows Update again.
+        </p>
+    </details>
+
+    <details>
+        <summary>Step 5: Clear the Windows Update Cache</summary>
+        <p>
+            Damaged temporary update files can sometimes cause
+            installation errors.
+        </p>
+        <ol>
+            <li>Press Windows + R on your keyboard.</li>
+            <li>Type services.msc and press Enter.</li>
+            <li>Find Windows Update in the services list.</li>
+            <li>Right-click it and select Stop.</li>
+            <li>Open File Explorer and navigate to
+                C:\Windows\SoftwareDistribution.</li>
+            <li>Delete the contents inside the folder, not the folder itself.</li>
+            <li>Return to Services, right-click Windows Update and select Start.</li>
+        </ol>
+
+        <div class="warning">
+            <strong>Important safety advice:</strong>
+            Ask an IT administrator for help if you are unsure.
+            Do not delete files from other Windows system folders.
+        </div>
+    </details>
+
+    <details>
+        <summary>Step 6: Check Date and Time settings</summary>
+        <ol>
+            <li>Open Start and select Settings.</li>
+            <li>Choose Time & language.</li>
+            <li>Select Date & time.</li>
+            <li>Enable Set time automatically.</li>
+            <li>Enable Set time zone automatically if available.</li>
+            <li>Select Sync now if necessary.</li>
+        </ol>
+    </details>
+
+    <details>
+        <summary>Step 7: Update third-party drivers</summary>
+        <p>
+            Outdated or incompatible drivers can prevent updates
+            from installing correctly.
+        </p>
+        <ol>
+            <li>Identify the hardware causing the problem.</li>
+            <li>Visit the manufacturer's official website.</li>
+            <li>Check for compatible driver updates.</li>
+            <li>Follow the manufacturer's installation instructions.</li>
+        </ol>
+    </details>
+
+    <details>
+        <summary>Step 8: Free up storage space</summary>
+        <p>
+            Windows needs enough free storage space to download
+            and install updates.
+        </p>
+        <p>
+            Microsoft gives minimum storage requirements of 16 GB
+            for upgrading a 32-bit operating system and 20 GB for
+            a 64-bit operating system in the guidance used for
+            this article. Actual requirements can vary.
+        </p>
+        <p>
+            Visit
+            <a href="https://support.microsoft.com/en-us/topic/85529ccb-c365-490d-b548-831022bc9b32" target="_blank" rel="noopener">
+                Microsoft's guide to freeing up drive space
+            </a>.
+        </p>
+    </details>
+
+    <details>
+        <summary>Step 9: Run Windows Update again</summary>
+        <ol>
+            <li>Open Start and select Settings.</li>
+            <li>Select Windows Update.</li>
+            <li>Choose Check for updates.</li>
+            <li>Download and install any available updates.</li>
+        </ol>
+    </details>
+
+    <details>
+        <summary>Step 10: Restart your computer</summary>
+        <p>
+            Some updates need a restart before they can finish installing.
+        </p>
+        <ol>
+            <li>Save your work and close open applications.</li>
+            <li>Select Start.</li>
+            <li>Choose Power.</li>
+            <li>Select Update and restart or Update and shut down.</li>
+        </ol>
+    </details>
+
+    <h2>Common Windows Update Error Codes</h2>
+
+    <p>
+        The following table explains some common error codes and
+        their possible causes.
+    </p>
+
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Error Code</th>
+                <th>Possible Cause</th>
+            </tr>
+            <tr>
+                <td>0x8007000d</td>
+                <td>Damaged Windows Update files or cache.</td>
+            </tr>
+            <tr>
+                <td>0x800705b4</td>
+                <td>Update took too long or was interrupted.</td>
+            </tr>
+            <tr>
+                <td>0x80240034</td>
+                <td>Incomplete update or connection problem.</td>
+            </tr>
+            <tr>
+                <td>0x800f0922</td>
+                <td>Insufficient storage or problems with system components.</td>
+            </tr>
+            <tr>
+                <td>0x80070057</td>
+                <td>Incorrect settings or corrupted files.</td>
+            </tr>
+            <tr>
+                <td>0x80080005</td>
+                <td>Possible permission or system configuration issue.</td>
+            </tr>
+            <tr>
+                <td>0xC1900101</td>
+                <td>Driver compatibility problem.</td>
+            </tr>
+            <tr>
+                <td>0x80248014</td>
+                <td>Windows Update database or service problem.</td>
+            </tr>
+            <tr>
+                <td>0x80070005</td>
+                <td>Access denied or insufficient permissions.</td>
+            </tr>
+            <tr>
+                <td>0x80070002</td>
+                <td>Update files may be missing.</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>When to Contact IT Support</h2>
+
+    <p>
+        If you have followed these steps and Windows Update
+        still does not work, contact the IT support team.
+        Include the error code and explain which troubleshooting
+        steps you have already tried.
+    </p>
+
+    <a class="support-button" href="create_ticket.php">
+        Contact IT Support
+    </a>
+
+    <p>
+        <a href="knowledge.html">← Back to Knowledge Base</a>
+    </p>
+
+    <h3>Information Sources</h3>
+    <p>
+        This article was prepared using guidance from
+        <a href="https://support.microsoft.com/en-gb/windows/deployment/updates-lifecycle/troubleshoot-problems-updating-windows" target="_blank" rel="noopener">
+            Microsoft Support - Troubleshoot problems updating Windows
+        </a>.
+    </p>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Netheret IT Support Solutions</p>
+    <p>Helping customers solve technology problems.</p>
+</footer>
+
+</body>
+</html>
